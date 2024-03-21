@@ -1,0 +1,19 @@
+stages:
+    - deploy-develop
+    - deploy
+
+deploy-develop:
+    stage: deploy
+    script:
+    - cd $APP_PATH
+    - ./fran-dev.sh
+    only:
+    - develop
+
+deploy production:
+    stage: deploy
+    script:
+    - cd $APP_PATH
+    - ./fran.sh
+    only:
+    - main

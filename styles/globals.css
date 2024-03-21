@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.date-input-none::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.dropzone:focus {
+  border-color: #2196f3;
+}
+.dropzone {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #333;
+  outline: none;
+  transition: border .24s ease-in-out;
+  height: 100%;
+}
+
+.hovered-image {
+  filter: brightness(80%);
+}
+
+.custom-dropdown {
+  @apply absolute z-10 bg-white border border-gray-300;
+}
